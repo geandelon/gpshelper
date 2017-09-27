@@ -138,7 +138,7 @@ public class EventoDaoSqlite extends PersistenciaSqlite<Evento> implements Event
     }
 
     /***
-     * Ira deletar Registros apartir de uma data passa por parametro
+     * Ira deletar Registros a partir de uma data passa por parametro
      *
      * @param codigoUsuario
      * @param dataLimite

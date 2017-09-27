@@ -204,32 +204,13 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 
     public void limparUltimosRastreamentos(View view){
         insereRastreamentosAntigos();
-//        try {
-//            RastreamentoDaoSqlite dao = new RastreamentoDaoSqlite();
-//
-//            Rastreamento rastreamentos = dao.listarUltimaPosicao(RCA_TESTE);
-//
-//            //insere rastreamentos antigos
-//
-//
-//
-//
-//
-//
-//
-//
-//        } catch (PersistenciaExcecao ex) {
-//            Log.e(TAG, "limparUltimosRastreamentos - Detalhes: " + ex.getMessage());
-//        }
     }
-
 
     public void SalvarRastreamentoComoEnviado(View view) {
         // O TRECHO DE CÓDIGO ABAIXO É SÓ UM EXEMPLO DE UTILIZAÇÃO
         // O IDEAL É FAZER A CONSULTA DENTRO DE UM THREAD SEPARADA DA THREAD DE MAIN
         try {
             List<Rastreamento> rastreamentos = new RastreamentoDaoSqlite().listarNaoEnviadosUsuario(RCA_TESTE,1);
-
 
             for(Rastreamento rastreamento:rastreamentos)rastreamento.setDataHoraEnvio(new DateTime());
 
