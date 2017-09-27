@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="config_rastrear_usuario">CONFIG_RASTREAR_USUARIO</string>
+    <string name="config_codigo_usuario">CONFIG_CODIGO_USUARIO</string>
+    <string name="config_titulo_notificacao">CONFIG_TITULO_NOTIFICACAO</string>
+    <string name="config_intervalo_coleta_tempo_gps">CONFIG_INTERVALO_COLETA_GPS_TEMPO</string>
+    <string name="config_intervalo_coleta_distancia_gps">CONFIG_INTERVALO_COLETA_GPS_DISTANCIA</string>
+    <string name="config_icone_notificacao">CONFIG_ICONE_NOTIFICACAO</string>
+
+
+    <integer name="config_padrao_integer">-1</integer>
+    <string name="config_padrao_string"> </string>
+    <bool name="config_padrao_bool">false</bool>
+
+</resources>

@@ -1,0 +1,30 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="br.com.gdelon.lib">
+
+    <application
+        android:allowBackup="false"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        >
+
+        <service
+            android:name="br.com.gdelon.lib.service.GPSService"
+            android:enabled="true"
+            android:exported="false"
+            />
+
+        <service
+            android:name="br.com.gdelon.lib.service.SalvaRastreamentoService"
+            android:enabled="true"
+            android:exported="false"
+            />
+
+        <service
+            android:name="br.com.gdelon.lib.service.SalvaEventoService"
+            android:enabled="true"
+            android:exported="false"
+            />
+
+    </application>
+
+</manifest>

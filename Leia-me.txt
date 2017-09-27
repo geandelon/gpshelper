@@ -1,0 +1,18 @@
+1 - Fazer o deploy
+gradlew :lib:clean :lib:build :lib:publish
+
+2 - Adição da biblioteca
+repositories {
+    maven {
+        url 'http://10.62.38.88:8081/nexus/content/repositories/releases/'
+    }
+}
+
+dependencies {
+    compile('br.maximasist:maxgpslib:1.0.0@aar') {
+        //exclude group: 'com.android.support', module: 'support-annotations'
+        //exclude group: 'joda-time', module: 'joda-time'
+        transitive = true
+    }
+}
+

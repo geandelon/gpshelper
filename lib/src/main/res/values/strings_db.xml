@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="bd_ultima_versao">
+
+    CREATE TABLE "GPS_RASTREAMENTO" (
+        "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        "codigo_usuario" TEXT NOT NULL,
+        "hash" TEXT NOT NULL,
+        "latitude" REAL NOT NULL,
+        "longitude" REAL NOT NULL,
+        "velocidade" REAL NOT NULL,
+        "acuracia" REAL NOT NULL,
+        "data_hora_captura" DATETIME NOT NULL,
+        "data_hora_envio" DATETIME,
+        "distancia" REAL DEFAULT 0,
+        "informacoes_adicionais" TEXT
+    );
+
+    CREATE TABLE "GPS_EVENTO" (
+        "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        "codigo_usuario" TEXT NOT NULL,
+        "hash" TEXT NOT NULL,
+        "tipo" INTEGER NOT NULL,
+        "latitude" REAL NOT NULL,
+        "longitude" REAL NOT NULL,
+        "informacoes_adicionais" TEXT,
+        "data_hora_captura" DATETIME NOT NULL,
+        "data_hora_envio" DATETIME
+    );
+
+    CREATE INDEX IDXCAPTURA_GPS_RASTREAMENTO ON GPS_RASTREAMENTO("data_hora_captura");
+
+    CREATE INDEX IDXENVIO_GPS_RASTREAMENTO ON GPS_RASTREAMENTO("data_hora_envio");
+
+    CREATE INDEX IDXCAPTURA_GPS_EVENTO ON GPS_EVENTO("data_hora_captura");
+
+    CREATE INDEX IDXENVIO_GPS_EVENTO ON GPS_EVENTO("data_hora_envio");
+
+
+    </string>
+
+    <string name="bd_1_0_0_para_2_0_0">
+
+        CREATE INDEX IDXCAPTURA_GPS_RASTREAMENTO ON GPS_RASTREAMENTO("data_hora_captura");
+
+        CREATE INDEX IDXENVIO_GPS_RASTREAMENTO ON GPS_RASTREAMENTO("data_hora_envio");
+
+        CREATE INDEX IDXCAPTURA_GPS_EVENTO ON GPS_EVENTO("data_hora_captura");
+
+        CREATE INDEX IDXENVIO_GPS_EVENTO ON GPS_EVENTO("data_hora_envio");
+
+    </string>
+
+
+    <string name="bd_2_0_0_para_3_0_0">
+
+        ALTER TABLE GPS_RASTREAMENTO ADD distancia REAL DEFAULT 0;
+
+        ALTER TABLE GPS_RASTREAMENTO ADD informacoes_adicionais TEXT;
+
+    </string>
+
+    <string name="bd_4_0_0_para_5_0_0">
+
+        ALTER TABLE GPS_RASTREAMENTO ADD distancia REAL DEFAULT 0;
+
+        ALTER TABLE GPS_RASTREAMENTO ADD informacoes_adicionais TEXT;
+
+    </string>
+
+</resources>
